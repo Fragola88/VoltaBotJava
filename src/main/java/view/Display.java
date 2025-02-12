@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.URI;
 
+/**
+ * edited by Enzo
+ * @author Enzo
+ */
+
 public class Display extends JFrame{
     private JPanel main;
     private JTextField chat;
