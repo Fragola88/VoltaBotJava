@@ -1,6 +1,5 @@
-package controller;
+package model;
 
-import model.CrudCat;
 import okhttp3.*;
 
 import java.io.IOException;
@@ -9,7 +8,7 @@ import java.io.IOException;
  * Singleton Obj
  */
 
-public class ActionManagement implements CrudCat {
+public class ServerPanel implements CrudCat {
 
     private OkHttpClient client;
     private Response response;
@@ -18,15 +17,15 @@ public class ActionManagement implements CrudCat {
 
     private final String endpoint = "http://"+publicIp+"/message";
 
-    static ActionManagement instance;
+    static ServerPanel instance;
 
-    private ActionManagement() {
+    private ServerPanel() {
 
     }
 
-    static ActionManagement getInstance() {
+    static ServerPanel getInstance() {
         if (instance == null) {
-            instance = new ActionManagement();
+            instance = new ServerPanel();
         }
         return instance;
     }
@@ -42,7 +41,7 @@ public class ActionManagement implements CrudCat {
                 .addHeader("Content-Type", "application/json")
                 .build();
 
-        response = client.newCall(request).execute();
+        this.response = this.client.newCall(request).execute();
     }
 
     @Override
