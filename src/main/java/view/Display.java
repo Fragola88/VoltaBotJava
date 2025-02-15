@@ -11,10 +11,12 @@ import java.net.URI;
 
 public class Display extends JFrame{
     private JPanel main;
-    private JTextField chat;
+    private JTextField chatInsert;
     private JButton send;
     private JButton options;
     private JButton collegamentiButton;
+    private JLabel chatUser;
+    private JLabel chatBot;
 
 
     public Display() {
@@ -41,6 +43,13 @@ public class Display extends JFrame{
             } catch (Exception a) {
                 JOptionPane.showMessageDialog(null, "Impossibile aprire la pagina web.", null, JOptionPane.ERROR_MESSAGE);
             }
+        });
+
+        send.addActionListener(e -> {
+            if(chatInsert.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Inserisci un messaggio.", null, JOptionPane.INFORMATION_MESSAGE);
+            }
+            chatUser.setText(chatInsert.getText());
         });
     }
 
