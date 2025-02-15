@@ -2,7 +2,6 @@ package view;
 
 import javax.swing.*;
 import java.awt.*;
-import java.net.URI;
 
 /**
  * edited by Enzo

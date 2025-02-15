@@ -17,7 +17,7 @@ public class ServerPanel implements CrudCat {
 
     private final String endpoint = "http://"+publicIp+"/message";
 
-    static ServerPanel instance;
+    public static ServerPanel instance;
 
     private ServerPanel() {
 
