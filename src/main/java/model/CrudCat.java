@@ -1,6 +1,13 @@
 package model;
 
+import java.io.IOException;
+
 public interface CrudCat {
 
-    //TODO()
+    void sendMessage(String message) throws Exception;
+
+
+    String getResponse();
+
+
 }
