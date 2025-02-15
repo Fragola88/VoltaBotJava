@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.URI;
 
-public final class ActionManagement extends Index implements Runnable{
+public final class ActionManagement extends Index{
 
 
     public ActionManagement() {
@@ -54,9 +54,4 @@ public final class ActionManagement extends Index implements Runnable{
         super.setVisible(false);
     }
 
-
-    @Override
-    public void run() {
-
-    }
 }
